@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { Button, Text, View } from "react-native";
-import { LoginProps } from "../../routes/index.types";
+import { LoginProps } from "@/routes/index.types";
 
 export const LoginScreen = () => {
   const navigaton = useNavigation<LoginProps["navigation"]>();
