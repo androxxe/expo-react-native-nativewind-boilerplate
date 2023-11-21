@@ -6,7 +6,7 @@ const MainTabs = createBottomTabNavigator<MainTabsStackParamList>();
 
 const HomeScreen = () => {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View className="flex-1 items-center justify-center">
       <Text>Home Screen</Text>
     </View>
   );
@@ -14,7 +14,7 @@ const HomeScreen = () => {
 
 const ProfileScreen = () => {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View className="flex-1 items-center justify-center">
       <Text>Profile Screen</Text>
     </View>
   );
