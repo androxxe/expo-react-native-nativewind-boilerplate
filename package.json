@@ -9,7 +9,8 @@
     "web": "eslint . && expo start --web",
     "prettier": "npx prettier . --write",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "commitlint": "commitlint --edit"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
