@@ -25,7 +25,17 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="com.androxxe.mobile.production"/>
+        <data android:scheme="com.androxxe.mobile.null"/>
+        <data android:scheme="com.androxxe.mobile.prod"/>
         <data android:scheme="com.androxxe.mobile"/>
+        <data android:scheme="com.androxxe.mobilea"/>
+        <data android:scheme="com.androxxe.mobileprod"/>
+        <data android:scheme="com.androxxe.mobile.dev"/>
+        <data android:scheme="com.androxxe.mobiledev"/>
+        <data android:scheme="com.androxxe.mobilenull"/>
+        <data android:scheme="com.androxxe"/>
+        <data android:scheme="com.androxxe.mobile.stag"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
