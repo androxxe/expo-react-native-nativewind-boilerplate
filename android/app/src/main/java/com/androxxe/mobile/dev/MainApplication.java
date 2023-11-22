@@ -1,4 +1,4 @@
-package com.androxxe.mobile;
+package com.androxxe.mobile.dev;
 
 import android.app.Application;
 import android.content.res.Configuration;

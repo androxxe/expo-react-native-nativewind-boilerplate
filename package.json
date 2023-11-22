@@ -3,14 +3,22 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "eslint . && expo start",
-    "android": "eslint . && expo run:android",
+    "start": "eslint . && APP_VARIANT=development expo start",
+    "android:run": "eslint . && APP_VARIANT=dev yarn prebuild:dev && APP_VARIANT=dev APP_ENV=dev expo run:android",
+    "android:run:stag": "eslint . && APP_VARIANT=stag yarn prebuild:stag && APP_VARIANT=stag APP_ENV=stag expo run:android",
+    "android:build:dev": "yarn prebuild:dev && cd android && ./gradlew assembleRelease",
+    "android:build:stag": "yarn prebuild:stag && cd android && ./gradlew assembleRelease",
+    "android:build:prod": "yarn prebuild:prod && cd android && ./gradlew assembleRelease",
     "ios": "eslint . && expo run:ios",
     "web": "eslint . && expo start --web",
     "prettier": "npx prettier . --write",
+    "prebuild:prod": "APP_VARIANT=prod npx expo prebuild",
+    "prebuild:stag": "APP_VARIANT=stag npx expo prebuild",
+    "prebuild:dev": "APP_VARIANT=dev npx expo prebuild",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "android": "expo run:android"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -20,6 +28,7 @@
     "@tanstack/react-query": "^5.8.4",
     "clsx": "^2.0.0",
     "expo": "~49.0.15",
+    "expo-font": "^11.6.0",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "nativewind": "^2.0.11",
@@ -46,6 +55,7 @@
     "eslint-plugin-react-native": "^4.1.0",
     "husky": "^8.0.3",
     "prettier": "3.1.0",
+    "react-native-dotenv": "^3.4.9",
     "tailwindcss": "3.3.1",
     "typescript": "^5.1.3"
   },

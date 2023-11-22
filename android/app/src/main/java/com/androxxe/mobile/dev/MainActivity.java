@@ -1,4 +1,4 @@
-package com.androxxe.mobile;
+package com.androxxe.mobile.dev;
 
 import android.os.Build;
 import android.os.Bundle;
